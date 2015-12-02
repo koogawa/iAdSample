@@ -41,7 +41,7 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) 
 
         // Configure the cell...
         cell.textLabel?.text = values[indexPath.row]
@@ -55,7 +55,7 @@ class TableViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
         self.interstitialPresentationPolicy = ADInterstitialPresentationPolicy.Manual
-        var displayed = self.requestInterstitialAdPresentation()
-        println(displayed)
+        let displayed = self.requestInterstitialAdPresentation()
+        print(displayed)
     }
 }
